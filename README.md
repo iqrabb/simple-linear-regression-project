@@ -144,5 +144,3 @@ Through this project, the following concepts were learned:
 
 **Iqra Bibi**
 
-
-This repository was created as part of a Machine Learning learning journey to practice data analysis, predictive modeling, data visualization, and GitHub project management using Python and Scikit-Learn.
