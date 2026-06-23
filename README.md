@@ -68,3 +68,35 @@ The model performance was evaluated using the R² Score metric.
 
 ```text
 Exam Score = 7.1567 × Study Hours + 26.3438
+
+
+## Interpretation
+
+- The coefficient (7.1567) indicates that for every additional hour studied, the predicted exam score increases by approximately 7.16 marks.
+- The intercept (26.3438) represents the estimated exam score when study hours are zero.
+
+## Sample Prediction
+
+### Input
+
+- Study Hours = 5
+
+### Predicted Output
+
+- Exam Score = 62.13
+
+## Learning Outcomes
+
+Through this project, the following concepts were learned:
+
+- Machine Learning Fundamentals
+- Supervised Learning
+- Simple Linear Regression
+- Data Visualization using Matplotlib
+- Data Splitting using Train-Test Split
+- Model Training and Testing
+- Prediction and Model Evaluation
+
+## Author
+
+**Iqra Bibi**
