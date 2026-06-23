@@ -140,13 +140,6 @@ Through this project, the following concepts were learned:
 
 ---
 
-
-## Conclusion
-
-This project successfully demonstrates the implementation of Simple Linear Regression for predicting student exam scores based on study hours. The high R² Score indicates that the model performs effectively and can be used to make reliable predictions. The project provides a practical introduction to Machine Learning concepts, model development, and predictive analytics.
-
----
-
 ## Author
 
 **Iqra Bibi**
