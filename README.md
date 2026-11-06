@@ -46,10 +46,10 @@ The slope describes the change in the model's estimated exam score for one addit
 ## Run the notebook
 
 1. Open `Machine_Learning_Linear_Regression.ipynb` in Google Colab or Jupyter.
-2. Make the dataset available at the path expected by the notebook, or update the data-loading cell to point to your local CSV file.
+2. Place `student_exam_data_v1.csv` beside the notebook, or update the `DATA_PATH` variable in the data-loading cell to your CSV location.
 3. Run the notebook cells from top to bottom.
 
-**Data note:** The notebook currently references a Google Drive path (`/content/drive/MyDrive/student_exam_data_v1.csv`). The CSV is not included in this repository, so you must supply the file yourself or update the notebook's data-loading path.
+**Data note:** The notebook now looks for `student_exam_data_v1.csv` in its working directory and shows a clear error if it is missing. The CSV is not included in this repository, so you must supply the file yourself.
 
 ## Repository contents
 
