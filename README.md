@@ -1,146 +1,70 @@
-# Machine Learning - Simple Linear Regression Project
+# Student Exam Score Prediction — Simple Linear Regression
 
-## Project Overview
+A beginner-friendly machine-learning notebook demonstrating how **study hours** can be used as a single feature to estimate **exam scores** with Scikit-learn's Linear Regression.
 
-This project demonstrates the implementation of a Simple Linear Regression model using Machine Learning techniques in Python. The primary objective is to analyze the relationship between students' study hours and their exam scores and build a predictive model capable of estimating exam performance based on study time.
+This project is an educational exercise in supervised learning, exploratory analysis, visualization, model fitting, and prediction.
 
-Simple Linear Regression is one of the most fundamental supervised Machine Learning algorithms used for predicting continuous numerical values. In this project, the model learns the relationship between study hours (independent variable) and exam scores (dependent variable) from historical data and uses that relationship to make predictions for new observations.
+## Project objective
 
----
+Explore the relationship between the number of hours a student studies and their exam score, then fit a simple linear regression model to that relationship.
 
-## Problem Statement
+- **Feature (X):** Study Hours
+- **Target (y):** Exam Score
+- **Problem type:** Supervised regression
+- **Algorithm:** Scikit-learn `LinearRegression`
 
-Academic performance is often influenced by the amount of time students dedicate to studying. This project aims to determine the relationship between study hours and exam scores and use Machine Learning to predict future exam results.
+## Workflow
 
-### Input Variable (X)
+1. Load the student study-hours dataset into a Pandas DataFrame.
+2. Inspect the data and select the feature and target columns.
+3. Visualize study hours against exam scores with a scatter plot.
+4. Fit a linear regression model.
+5. Generate predictions and visualize the fitted regression line.
+6. Review the model's coefficient, intercept, and R² score.
 
-* Study Hours
+> **Evaluation note:** The current notebook fits and evaluates the model on the same 29 observations; it does not implement a train/test split. Therefore, the reported R² value (approximately 97.71%) is a training-set result, not an estimate of performance on unseen data. It should not be presented as a validated test score.
 
-### Output Variable (Y)
+## Regression equation
 
-* Exam Score
-
----
-
-## Dataset Information
-
-The dataset contains two features:
-
-| Feature     | Description                    |
-| ----------- | ------------------------------ |
-| Study Hours | Number of hours spent studying |
-| Exam Score  | Score obtained in the exam     |
-
-The dataset is clean, structured, and suitable for demonstrating the concepts of Simple Linear Regression.
-
----
-
-## Technologies and Libraries Used
-
-* Python
-* Google Colab
-* Pandas
-* NumPy
-* Matplotlib
-* Scikit-Learn
-
----
-
-## Project Workflow
-
-### 1. Data Loading
-
-The dataset was imported and loaded into a Pandas DataFrame for analysis and processing.
-
-### 2. Data Exploration
-
-The dataset structure, shape, and basic information were examined to understand the available features.
-
-### 3. Data Visualization
-
-A scatter plot was created using Matplotlib to visualize the relationship between study hours and exam scores.
-
-### 4. Data Splitting
-
-The dataset was divided into training and testing sets using the `train_test_split()` function from Scikit-Learn.
-
-### 5. Model Training
-
-A Simple Linear Regression model was trained using Scikit-Learn's `LinearRegression()` algorithm.
-
-### 6. Prediction
-
-The trained model was used to predict exam scores based on study hours.
-
-### 7. Model Evaluation
-
-The performance of the model was evaluated using the R² Score metric.
-
----
-
-## Model Performance
-
-**R² Score:** 97.71%
-
-The model achieved an R² Score of 97.71%, indicating a very strong relationship between study hours and exam scores. This means the model explains approximately 97.71% of the variation in exam scores.
-
----
-
-## Regression Equation
+The notebook reports the fitted equation:
 
 ```text
 Exam Score = 7.1567 × Study Hours + 26.3438
 ```
 
-### Interpretation
+The slope describes the change in the model's estimated exam score for one additional study hour within the observed data range. The intercept is the model's estimated score at zero study hours; it should be interpreted cautiously if zero hours is outside the meaningful range of the dataset.
 
-* The coefficient (7.1567) indicates that for every additional hour studied, the predicted exam score increases by approximately 7.16 marks.
-* The intercept (26.3438) represents the estimated exam score when study hours are zero.
+## Technology
 
----
+- Python
+- Google Colab / Jupyter Notebook
+- Pandas
+- NumPy
+- Matplotlib
+- Scikit-learn
 
-## Sample Prediction
+## Run the notebook
 
-### Input
+1. Open `Machine_Learning_Linear_Regression.ipynb` in Google Colab or Jupyter.
+2. Make the dataset available at the path expected by the notebook, or update the data-loading cell to point to your local CSV file.
+3. Run the notebook cells from top to bottom.
 
-* Study Hours = 5
+**Data note:** The notebook currently references a Google Drive path (`/content/drive/MyDrive/student_exam_data_v1.csv`). The CSV is not included in this repository, so you must supply the file yourself or update the notebook's data-loading path.
 
-### Predicted Output
+## Repository contents
 
-* Exam Score = 62.13
+- `Machine_Learning_Linear_Regression.ipynb` — notebook containing the analysis and model implementation.
+- `README.md` — project documentation.
+- `LICENSE` — repository license.
 
-This prediction demonstrates how the model can estimate exam performance based on study time.
+## Limitations and next steps
 
----
-
-## Data Visualization
-
-The project includes:
-
-* Scatter Plot for data visualization
-* Regression Line for trend analysis
-* Predicted vs Actual comparison
-
-These visualizations help in understanding the relationship between study hours and exam scores.
-
----
-
-## Learning Outcomes
-
-Through this project, the following concepts were learned:
-
-* Introduction to Machine Learning
-* Supervised Learning Techniques
-* Simple Linear Regression
-* Data Preprocessing
-* Data Visualization using Matplotlib
-* Model Training and Testing
-* Prediction and Evaluation
-* Performance Measurement using R² Score
+- The dataset file is not currently committed, so the notebook is not fully reproducible from a fresh clone.
+- The current R² score is measured on the training observations.
+- The project uses only one feature and a small dataset.
+- Add the dataset with its source/license, use a train/test split or cross-validation, and report held-out MAE, RMSE, and R².
+- Include actual notebook output screenshots once the notebook has been run with the dataset available.
 
 ---
 
-## Author
-
-**Iqra Bibi**
-
+Created as a foundational practice project while learning machine learning and regression.
